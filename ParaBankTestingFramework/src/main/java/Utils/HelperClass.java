@@ -1,8 +1,5 @@
 package Utils;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
@@ -13,26 +10,25 @@ public class HelperClass {
 	
 	private static HelperClass helperclass;
 	private static WebDriver driver;
-	public final static int TIMEOUT =5;
 	
 	public HelperClass() {
 		
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
+		
+		Properties prop = PropertiesFileReader.PropertiesFileReader("src/test/resources/Properties/config.properties");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.parseInt(prop.getProperty("TIMEOUT"))));
 		
 	}
 	
 	public static void openUrl(String url) {
 		
-
 		driver.get(url);
 		
 	}
 	
 	public static WebDriver getDriver() {
-		return driver;
-		
+		return driver;	
 	}
 	
 	public static void setUpDriver() {

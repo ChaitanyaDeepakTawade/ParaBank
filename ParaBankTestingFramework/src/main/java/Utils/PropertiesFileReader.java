@@ -1,4 +1,4 @@
-package StepDefinations;
+package Utils;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -6,9 +6,9 @@ import java.io.IOException;
 import java.util.Properties;
 
 /*
- * Testing Data for login page
+ * This class helps to get data from properties file.
  * @Author chaitanya tawade (expleo pune) 
- * @sign 30/01/2024 jdk-1.7 
+ * @sign 31/01/2024 jdk-1.7 
  * */
 
 public class PropertiesFileReader {
