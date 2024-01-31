@@ -6,6 +6,7 @@ Feature: Login Page Testing with valid and invalid credentials
   @TC2.1
   Scenario: login page test with valid credentials
     Given User Should be on home page 
+    When If the user is already logged then logout  
     When Enter valid Login Credentials
     And click on login button
     Then verify user is successfully login in the system
@@ -13,7 +14,8 @@ Feature: Login Page Testing with valid and invalid credentials
   @TC2.2
    Scenario: login page test with invalid credentials
     Given User Should be on home page 
-    When Enter valid Login Credentials
+    When If the user is already logged then logout  
+    When Enter invalid Login Credentials
     And click on login button
-    Then verify user is successfully login in the system
+    Then verify wrong credentials error 
     
