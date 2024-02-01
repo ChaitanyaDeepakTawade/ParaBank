@@ -1,4 +1,4 @@
-package Actions;
+package com.Actions;
 
 
 import org.apache.logging.log4j.LogManager;
@@ -6,9 +6,10 @@ import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import Locators.HomePageLocator;
-import Locators.RegisterPageLocators;
-import Utils.HelperClass;
+import com.Locators.HomePageLocator;
+import com.Locators.RegisterPageLocators;
+import com.Utils.HelperClass;
+
 import org.apache.logging.log4j.Logger;
 
 /*

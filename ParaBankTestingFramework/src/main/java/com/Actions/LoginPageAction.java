@@ -1,12 +1,12 @@
-package Actions;
+package com.Actions;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import Locators.LoginPageLocators;
-import Utils.HelperClass;
+import com.Locators.LoginPageLocators;
+import com.Utils.HelperClass;
 
 /*
  * Actiona file for login feature
@@ -45,7 +45,7 @@ public class LoginPageAction {
 			Assert.assertEquals(objloginPageLtr.WelcomeMsg.getText(), "Accounts Overview");
 
 		} catch (Exception e) {
-			log.info("Error Message not generated after wrong credentials");
+			log.error("Error Message not generated after wrong credentials");
 		}
 	}
 
@@ -57,7 +57,7 @@ public class LoginPageAction {
 					"An internal error has occurred and has been logged.");
 
 		} catch (Exception e) {
-			log.info("Error Message not generated after wrong credentials");
+			log.error("Error Message not generated after wrong credentials");
 		}
 	}
 

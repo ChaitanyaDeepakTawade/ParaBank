@@ -1,13 +1,14 @@
-package StepDefinations;
+package com.StepDefinations;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
-import Actions.RegisterPageAction;
-import Utils.HelperClass;
-import Utils.PropertiesFileReader;
+import com.Actions.RegisterPageAction;
+import com.Utils.HelperClass;
+import com.Utils.PropertiesFileReader;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

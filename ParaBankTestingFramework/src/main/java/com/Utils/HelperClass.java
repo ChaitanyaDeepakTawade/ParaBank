@@ -1,4 +1,4 @@
-package Utils;
+package com.Utils;
 
 import java.time.Duration;
 import java.util.Properties;
