@@ -1,9 +1,13 @@
 package com.Actions;
 
 
-import org.apache.logging.log4j.LogManager;
+import java.time.Duration;
 
+import org.apache.logging.log4j.LogManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.Locators.HomePageLocator;
@@ -22,6 +26,7 @@ public class RegisterPageAction {
 	RegisterPageLocators objRegisterPageLTR;
 	HomePageLocator objHomePageLocator;
 	Logger log;
+	WebDriverWait wait ;
 	
 	public RegisterPageAction() {
 		
@@ -35,7 +40,9 @@ public class RegisterPageAction {
 	}
 	
 	public void clickOnRegisterLink() {
+		wait = new WebDriverWait(HelperClass.getDriver(),Duration.ofSeconds(10));
 		
+	    wait.until(ExpectedConditions.visibilityOf(objHomePageLocator.Register));
 		objHomePageLocator.Register.click();
 		log.info("click Register link");
 		
